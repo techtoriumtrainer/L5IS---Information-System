@@ -1,0 +1,103 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
+
+namespace Form___SQL_conn
+{
+    public partial class Form1 : Form
+    {
+
+        private string _mySqlConString = "server=127.0.0.1;" +
+                                         "uid=root;" +
+                                         "pwd=Techtorium;" +
+                                         "database=usertest";
+
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+  
+        // SQL Server Implementation
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string constring = "Data Source=T2137;Initial Catalog=C#SQL;Integrated Security=True";
+            SqlConnection con = new SqlConnection(constring);
+            con.Open();
+            if (con.State == System.Data.ConnectionState.Open) // to ensure connection is open or not
+            {
+                string q = "insert into data(ID,Name) values('" + textBox1.Text + "','" + textBox2.Text + "')";
+                SqlCommand cmd = new SqlCommand(q, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data insereted successfully");
+            }
+            else
+            {
+                MessageBox.Show("Connection not established");
+            }
+
+        }
+
+
+        // MySQL Implementation - INSERT
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            MySqlConnection con = new MySqlConnection(_mySqlConString);
+            con.Open();
+
+            if (con.State == ConnectionState.Open) // to ensure connection is open ornot
+            {
+                string query = "INSERT INTO student(ID,Firstname,Lastname) VALUES ('" + textBox3.Text + "','" + textBox4.Text + "','" + textBox5.Text + "')";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Data inserted successfully");
+            }
+            else
+            {
+                MessageBox.Show("Connection not established");
+            }
+            
+        }
+
+        // MySQL Implementation - SELECT
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MySqlConnection con = new MySqlConnection(_mySqlConString);
+            con.Open();
+
+            if (con.State == ConnectionState.Open) // to ensure connection is open ornot
+            {
+                string query = "SELECT * FROM student";
+                MySqlCommand cmd = new MySqlCommand(query, con);
+                MySqlDataReader result = cmd.ExecuteReader();
+                while (result.Read())
+                {
+                    listBox1.Items.Add(result.GetInt32(0) + " - " + result.GetString(1) + " " + result.GetString(2));
+                }
+                MessageBox.Show("Data inserted successfully");
+            }
+            else
+            {
+                MessageBox.Show("Connection not established");
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
+
+   
+   
