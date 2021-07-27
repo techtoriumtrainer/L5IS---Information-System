@@ -10,8 +10,6 @@
 <h5> Welcome to Techtorium </h5>
 <h6> Welcome to Techtorium </h6>
 <h6> About</h6>
-<a name="#Welcome to techtorium"></a>
-<a href="Welcome to Techtorium">About</a>
 <p> This is a paragraph</p>
 <b> This text is bold</b>
 <br>
