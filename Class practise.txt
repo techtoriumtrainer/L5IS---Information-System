@@ -1,0 +1,64 @@
+<html>
+<head>
+</head>
+<body>
+</body>
+<marquee> <h1>  Welcome to Techtorium </h1> </marquee>
+ <p> This is a paragraph</p>
+<h2> Welcome to Techtorium </h2>
+<h3> Welcome to techtorium </h3>
+<h5> Welcome to Techtorium </h5>
+<h6> Welcome to Techtorium </h6>
+<h6> About</h6>
+<a name="#Welcome to techtorium"></a>
+<a href="Welcome to Techtorium">About</a>
+<p> This is a paragraph</p>
+<b> This text is bold</b>
+<br>
+<i> This text is Italic</i> <br>
+<small> This is some smaller text</small>
+<p> Do not forget to buy <mark> milk</mark> today.</p>
+<p> My favourite color is <del> blue</del><ins>red</ins></p>
+<p>This is <sub>subscripted</sub>text.</p>
+<p> This is <sup>superscripted</sup>text.</p>
+<ul>
+    <li>Coffee</li>
+    <li>Green tea</li>
+    <li> Milk</li>
+</ul>
+<ol>
+    <li align=right></li>Coffee</li>
+    <li>Green tea</li>
+    <li> Milk</li>
+</ol>
+<dl>
+    <dt>Coffee</dt>
+    <dd> - black hot drinks</dd>
+    <dt>Green tea</dt>
+    <dd> - Green hot drinks</dd>
+    <dt> Milk</dt>
+    <dd> - white hot drinks</dd>
+</dl>
+<img src="FL.jpg" alt ="Florida" style="float:right;width:333px;height:250px;"> <br>
+
+<a href="https://www.pbtech.co.nz/"> PB Tech</a> <br>
+
+<table style "width=100%">
+    <tr>
+        <th>SFirstName</th>
+        <th>SLastName</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Ali</td>
+        <td>Kanani</td>
+        <td>37</td>
+    </tr>
+    <tr>
+        <td>Dave</td>
+        <td>Stokes</td>
+        <td>45</td>
+    </tr>
+</table>
+
+</html>
